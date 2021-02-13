@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-package-version",
+  "name": "@smnhgn/vite-plugin-package-version",
   "license": "MIT",
   "description": "vite plugin to load package version into env",
   "version": "0.0.1",
@@ -21,7 +21,7 @@
     "build": "npm run clean && tsup src/index.ts --dts",
     "dev": "tsup src/index.ts --dts --watch",
     "dev:client": "npm -C example run dev",
-    "postinstall": "cd example && npm install"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "vite": ">=2.0.0-beta.69"
