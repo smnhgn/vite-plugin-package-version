@@ -1,8 +1,8 @@
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import { defineConfig } from 'vite';
-import { ViteStarter } from 'vite-plugin-typescript-starter';
+import loadVersion from 'vite-plugin-package-version';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [reactRefresh(), ViteStarter()],
+  plugins: [reactRefresh(), loadVersion()],
 });
