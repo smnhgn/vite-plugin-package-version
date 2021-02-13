@@ -2,7 +2,7 @@
   "name": "vite-plugin-package-version",
   "license": "MIT",
   "description": "vite plugin to load package version into env",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "vite",
     "typescript",
