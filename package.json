@@ -16,6 +16,9 @@
     "url": "git+https://github.com/smnhgn/vite-plugin-package-version.git"
   },
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rm -rf dist",
     "build": "npm run clean && tsup src/index.ts --dts",
