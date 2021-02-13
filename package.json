@@ -1,0 +1,35 @@
+{
+  "name": "vite-plugin-typescript-starter",
+  "license": "MIT",
+  "description": "typescript starter for vite plugins",
+  "version": "0.0.1",
+  "keywords": [
+    "vite",
+    "typescript",
+    "starter"
+  ],
+  "author": "Simon Haugen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smnhgn/vite-plugin-typescript-starter.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run plugin:dev\" \"npm run example:dev\"",
+    "build": "npm run plugin:build && npm run example:build",
+    "plugin:dev": "tsup src/index.ts --dts --watch",
+    "plugin:build": "tsup src/index.ts --dts",
+    "example:dev": "npm -C example run dev",
+    "example:build": "npm -C example run build",
+    "postinstall": "cd example && npm install"
+  },
+  "peerDependencies": {
+    "vite": ">=2.0.0-beta.65"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "tsup": "^3.12.1",
+    "typescript": "^4.1.3",
+    "vite": "^2.0.0-beta.65"
+  }
+}
