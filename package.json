@@ -17,12 +17,10 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "dev": "concurrently \"npm run plugin:dev\" \"npm run example:dev\"",
-    "build": "npm run plugin:build && npm run example:build",
-    "plugin:dev": "tsup src/index.ts --dts --watch",
-    "plugin:build": "tsup src/index.ts --dts",
-    "example:dev": "npm -C example run dev",
-    "example:build": "npm -C example run build",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsup src/index.ts --dts",
+    "dev": "tsup src/index.ts --dts --watch",
+    "dev:client": "npm -C example run dev",
     "postinstall": "cd example && npm install"
   },
   "peerDependencies": {
