@@ -1,17 +1,19 @@
 {
-  "name": "vite-plugin-typescript-starter",
+  "name": "vite-plugin-package-version",
   "license": "MIT",
-  "description": "typescript starter for vite plugins",
+  "description": "vite plugin to load package version into env",
   "version": "0.0.1",
   "keywords": [
     "vite",
     "typescript",
-    "starter"
+    "package",
+    "version",
+    "environment"
   ],
   "author": "Simon Haugen",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smnhgn/vite-plugin-typescript-starter.git"
+    "url": "git+https://github.com/smnhgn/vite-plugin-package-version.git"
   },
   "main": "dist/index.js",
   "scripts": {
