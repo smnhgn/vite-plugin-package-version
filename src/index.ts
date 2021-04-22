@@ -7,12 +7,10 @@ const createPlugin = (): Plugin => {
     name: 'vite-plugin-package-version',
     config: (_, env) => {
       if (env) {
-        return {
-          define: {
-            ['import.meta.env.PACKAGE_VERSION']:
-              process.env.npm_package_version,
-          },
-        };
+        const key = 'import.meta.env.PACKAGE_VERSION';
+        const val = JSON.stringify(process.env.npm_package_version);
+
+        return { define: { [key]: val } };
       } else {
         envInjectionFailed = true;
       }
