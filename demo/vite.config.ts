@@ -5,4 +5,8 @@ import loadVersion from 'vite-plugin-package-version';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [reactRefresh(), loadVersion()],
+  server: {
+    port: 3000,
+    strictPort: true,
+  },
 });
