@@ -27,8 +27,7 @@
     "demo:clean": "rimraf demo/{dist,package-lock.json,node_modules} && npm -C demo install",
     "demo:dev": "npm -C demo run dev",
     "demo:prod": "npm -C demo run build && npm -C demo run serve",
-    "prepublishOnly": "npm run build && npm run test",
-    "postinstall": "npm run build"
+    "prepublishOnly": "npm run build && npm run test"
   },
   "peerDependencies": {
     "vite": ">=2.0.0-beta.69"
