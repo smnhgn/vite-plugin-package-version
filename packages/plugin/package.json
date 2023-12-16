@@ -2,7 +2,7 @@
   "name": "vite-plugin-package-version",
   "license": "MIT",
   "description": "vite plugin to load package version into env",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "keywords": [
     "vite",
     "typescript",
@@ -25,7 +25,9 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsup src/index.ts --dts --format esm,cjs --clean --watch",
     "build": "tsup src/index.ts --dts --format esm,cjs --clean",
