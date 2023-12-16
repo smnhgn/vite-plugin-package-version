@@ -1,13 +1,13 @@
-import type { Plugin } from 'vite';
+import type { Plugin } from "vite";
 
 let envInjectionFailed = false;
 
 const createPlugin = (): Plugin => {
   return {
-    name: 'vite-plugin-package-version',
+    name: "vite-plugin-package-version",
     config: (_, env) => {
       if (env) {
-        const key = 'import.meta.env.PACKAGE_VERSION';
+        const key = "import.meta.env.PACKAGE_VERSION";
         const val = JSON.stringify(process.env.npm_package_version);
 
         return { define: { [key]: val } };

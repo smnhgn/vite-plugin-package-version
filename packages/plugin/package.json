@@ -1,0 +1,42 @@
+{
+  "name": "vite-plugin-package-version",
+  "license": "MIT",
+  "description": "vite plugin to load package version into env",
+  "version": "1.0.2",
+  "keywords": [
+    "vite",
+    "typescript",
+    "package",
+    "version",
+    "environment"
+  ],
+  "author": "Simon Haugen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smnhgn/vite-plugin-package-version.git"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "tsup src/index.ts --dts --format esm,cjs --clean --watch",
+    "build": "tsup src/index.ts --dts --format esm,cjs --clean",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "peerDependencies": {
+    "vite": ">=2.0.0-beta.69"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vite": ">=5.0.10"
+  }
+}
